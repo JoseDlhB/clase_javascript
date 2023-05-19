@@ -101,4 +101,49 @@ console.log(typeof(true)) // Boolean
 console.log(typeof(3.1416)) // Number 
 console.log(typeof("undefined")) // String
 console.log(typeof(alert)) // Funtion
-console.log(typeof(null)) // Undefined
+console.log(typeof(null)) // Object --> ERROR DE JAVASCRIPT
+
+// TABLA DE CONVERSIONES DE TIPO
+
+// Convertir a String
+let valor = true
+valor = String(valor); // "true"
+valor = String(false); // "false"
+valor = String(null); // "null"
+valor = String(undefined); // "undefined"
+
+// CONVERSION A NUMBER
+
+// Conversiones númericas ocurren automáticamente en funciones matematicas y expresiones
+
+console.log('6'/'2') // 3
+console.log(1 + '2') // '12' + --> Concatenación
+console.log('1' + 2) // '12' + --> Concatenación
+
+valor = Number(undefined) // NaN
+valor = Number(null) // 0
+valor = Number(true) // 1
+valor = Number(false) // 0 
+valor = Number('') // 0
+valor = Number('Hola Mundo') // NaN  ---> Error de calculo 
+
+// CONVERSIÓN A BOOLEAN
+
+valor = Boolean(undefined) // false
+valor = Boolean(null) // false
+valor = Boolean('') // false
+valor = Boolean(NaN) // false 
+valor = Boolean(0) // false
+valor = Boolean('0') // true
+valor = Boolean('Hola Mundo') // true
+
+// COMPARACIONES ENTRE DIFERENTES TIPOS
+// Primero ocurren las conversiones a entero y luego a boolean
+console.log('2' > 1) // true
+console.log('01' == 1) // true
+console.log(true > 0) // true
+console.log(false > 0) // false
+console.log('Hola' > 1) // false 
+console.log(null == undefined) // true ---> Error JS
+console.log(0 == false) // true
+console.log('0' == false) // true
