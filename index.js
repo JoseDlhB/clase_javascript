@@ -147,3 +147,190 @@ console.log('Hola' > 1) // false
 console.log(null == undefined) // true ---> Error JS
 console.log(0 == false) // true
 console.log('0' == false) // true
+
+// IF
+/*
+if (condicion){
+
+} else if(){
+
+}else{
+
+}
+*/
+
+// IF DE LINEA
+
+// if(condicion) console.log('Mensaje')
+
+if ('45a'/3){
+    console.log("Entró") // No entró
+}
+
+if ('0'){
+    console.log("Entró") // Entró ---> Si no hay expresión matematica no lo conv a entero
+}
+
+// Operador Ternario
+//resultado = Condicion ? operacion verdadera : operacion falsa;
+
+resultado = 4 > 5 ? 'Es verdadero' : 'Es falso';
+
+// WHILE
+/* while(condicion){
+
+} */
+
+// DO WHILE
+/*
+do {
+
+} while(condicion)
+*/
+
+// FOR
+/*
+for(comienzo; condicion; incremento){
+
+}
+*/
+
+for (i = 0; i <= 10; i++){
+    console.log(i+1)
+}
+
+// SWITCH
+
+/*
+switch(valor): {
+    case valor1:
+        [breack];
+    case valor2:
+        [break];
+    default:
+        [break];
+}
+*/
+
+a = 2 + 2
+switch(a){
+    case 3:
+        console.log('El resultado es 3')
+        break;
+    case 4:
+        console.log('El resultado es 4')
+        break;
+    default:
+        console.log('Ninguno de los valores')
+
+}
+
+// VAR VS LET VS CONST
+
+/*var edad_2 = 10;
+var edad_2 = 20;
+console.log(edad_2);*/ //No permite modificar el valor de la variable
+
+/*let edad_2 = 10;
+let edad_2 = 20;
+console.log(edad_2);*/ 
+
+/*const edad_2 = 10;
+edad_2 = 20;
+console.log(edad_2)*/ //Genera un error
+
+// ESCOPE DE VAR, LET Y CONST
+
+/*var edad_2 = 10;
+if(true){
+    var edad_2 = 20;
+    console.log(edad_2);
+}
+console.log(edad_2) */
+
+/*let edad_2 = 10;
+if(true){
+    let edad_2 = 20;
+    console.log(edad_2);
+}
+console.log(edad_2) */
+
+/*const edad_2 = 10;
+if(true){
+    const edad_2 = 20;
+    console.log(edad_2);
+}
+console.log(edad_2) */
+
+/*let edades = [10, 20, 30]
+edades = [20, 40, 50]
+edades.push(70) //Agregar un valor a la lista
+console.log(edades)*/
+
+/*const edades = [10, 20, 30] 
+//edades = [20, 40, 50] //No permite modificar 
+edades.push(70) //Permite agregar un valor a la lista
+console.log(edades)*/
+
+const persona = {
+    nombre: "Jose",
+    apellido: "De la hoz",
+    edad: 23
+}
+persona.edad = 20
+persona.nombre = "Diego"
+persona.apellido = "Ballena"
+
+console.log(persona)
+
+// FUNCIONES
+
+/*function sumar(num_uno, num_dos){
+    console.log(num_uno+num_dos)
+}
+
+sumar(2,6)*/
+
+// FUNCIÓN FLECHA
+
+const sumar = (num_uno, num_dos) => {
+    console.log(num_uno + num_dos)
+}
+
+sumar(2,8)
+
+const saludar = () => {
+    console.log("Hola Mundo")
+}
+
+const cuadrado = base => {
+    console.log(base ** 2)
+}
+
+cuadrado(5)
+
+const sumar_2 = (num_uno, num_dos) => {
+    return(num_uno + num_dos)
+}
+
+const suma_3 = (num_uno, num_dos) => num_uno + num_dos
+
+// TEMPLATE STRING
+
+//Backtick
+const potencia = (base, exponente) => `El resultado de la potencia es: ${base ** exponente}`
+
+//Destructuring Objects
+
+const mascota ={
+    nombre: 'Tom',
+    edad_o: 5,
+    vivo: true,
+    razas: ['Pastor Aleman', 'Pitbull']
+}
+
+console.log(mascota.nombre)
+
+const {edad_o, vivo} = mascota  //
+
+console.log(edad_o)
