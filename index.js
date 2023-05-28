@@ -331,6 +331,96 @@ const mascota ={
 
 console.log(mascota.nombre)
 
-const {edad_o, vivo} = mascota  //
+const {edad_o, vivo} = mascota  //permite almacenar en una variable los datos que se extraen del objeto
 
 console.log(edad_o)
+
+// PROMESAS
+
+/*const data = [
+    {
+        title: 'Aprendiendo JavaScript',
+        year: '2021',
+        isbn: '994-223-4527',
+        author: 'Roberto Morales'
+    },{
+        title: 'Aprendiendo Python',
+        year: '2018',
+        isbn: '994-223-4527',
+        author: 'Jose De la hoz'
+    },{
+        title: 'Aprendiendo Ruby',
+        year: '2019',
+        isbn: '994-223-4999',
+        author: 'Manuel Castro'
+    }
+]
+
+function getData(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data);
+        }, 5000)
+    })
+}
+
+getData().then((response)=> console.log(response))*/
+
+// ASYNC & AWAIT (AZÚCAR SINTAGTICO)
+
+/*const data = [
+    {
+        title: 'Aprendiendo JavaScript',
+        year: '2021',
+        isbn: '994-223-4527',
+        author: 'Roberto Morales'
+    },{
+        title: 'Aprendiendo Python',
+        year: '2018',
+        isbn: '994-223-4527',
+        author: 'Jose De la hoz'
+    },{
+        title: 'Aprendiendo Ruby',
+        year: '2019',
+        isbn: '994-223-4999',
+        author: 'Manuel Castro'
+    }
+]
+
+/*const getData = () => {
+    setTimeout(() => {
+        return data;
+    }, 2000)
+}
+
+function getData(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data);
+        }, 5000)
+    })
+}
+
+datos = getData()
+console.log(datos)
+
+async function getInformation(){
+    const libros = await getData();
+    console.log(libros)
+}*/
+
+
+// CONSUMO API PUBLICA (RICK AND MORTY)
+
+const getPersonajes = async () => {
+    try{
+        const resp = await fetch("https://rickandmortyapi.com/api/character")
+        const data = await resp.json()
+        const results = data.results
+        console.log(results)
+    }catch(error){
+        console.log(error)
+    }
+}
+
+getPersonajes()
